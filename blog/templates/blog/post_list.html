@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JokerZ</title>
-
-    </head>
 
 
+    <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
 
-
-    <body>
+    {% for post in posts %}
         <div>
-            <h1><a href="/">JokerZ Blog Creater</a> </h1>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>Live Date: 15.03.18, 9.27PM</p>
-            <h2><a href="">My First Post</a> </h2>
-            <p>I Can Test</p>
-        </div>
-
-        <div>
-            <p>Published: 15.03.18 9.30PM</p>
-            <h2><a href="">My Second Post</a> </h2>
-            <p>Hello Guys!</p>
-        </div>
-    </body>
+    {% endfor %}
 </html>
